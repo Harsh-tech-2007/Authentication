@@ -24,7 +24,7 @@ async function sendVerificationEmail(email, otp) {
   await sendMail({
     to: email,
     subject: "Verify your email — AuthApp",
-    html: ```
+    html: `
 <div style="font-family:Inter,Arial,sans-serif;max-width:520px;margin:0 auto;padding:32px 24px;background:#f8fafc;border-radius:16px;color:#0f172a;">
 
     <!-- Header -->
@@ -65,7 +65,7 @@ async function sendVerificationEmail(email, otp) {
     </p>
 
 </div>
-```,
+`,
   });
 }
 
@@ -74,7 +74,7 @@ async function sendPasswordResetEmail(email, otp) {
   await sendMail({
     to: email,
     subject: "Reset your password — AuthApp",
-    html: ```
+    html: `
 <div style="font-family:Inter,Arial,sans-serif;max-width:520px;margin:0 auto;padding:32px 24px;background:#f8fafc;border-radius:16px;color:#0f172a;">
 
     <!-- Header -->
@@ -117,7 +117,7 @@ async function sendPasswordResetEmail(email, otp) {
     </p>
 
 </div>
-```,
+`,
   });
 }
 
