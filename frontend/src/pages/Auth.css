@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.auth-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  padding: 2rem 1rem;
+}
+
+.auth-panel, .mobile-logo {
+  display: none !important;
+}
+
+.auth-form-panel {
+  width: 100%;
+  max-width: 380px; /* Reduced from 440px to make the box more normal/compact */
+  background: transparent;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Reduced margin */
+}
+
+.auth-header h1 {
+  font-size: 1.6rem; /* Reduced font size */
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.auth-subtitle-text {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0;
+}
+
+/* ── Google Button ── */
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7rem; /* Reduced padding */
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px; /* Slightly tighter border radius */
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+.btn-google:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+.google-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.6rem;
+}
+
+/* ── Divider ── */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.25rem 0; /* Reduced margin */
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+.divider span {
+  padding: 0 0.75rem;
+}
+
+/* ── Form Fields ── */
+.field {
+  margin-bottom: 1rem; /* Tighter field grouping */
+}
+
+.field label {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem; /* Slightly smaller label */
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.5rem; /* Tighter label spacing */
+}
+
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrap .input-icon {
+  position: absolute;
+  left: 0.85rem;
+  width: 16px; /* Slightly smaller icon */
+  height: 16px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.input-wrap input {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 2.4rem; /* Tighter input padding */
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px; /* Tighter corner radius */
+  font-family: inherit;
+  font-size: 0.9rem; /* Slightly smaller font */
+  color: #0f172a;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+.input-wrap input::placeholder {
+  color: #cbd5e1;
+}
+.input-wrap input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.eye-btn {
+  position: absolute;
+  right: 0.4rem;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  padding: 0.4rem;
+  cursor: pointer;
+  display: flex;
+}
+.eye-btn:hover { color: #64748b; }
+.eye-btn svg { width: 16px; height: 16px; }
+
+/* ── Checkbox ── */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem; /* Tighter checkbox margin */
+  font-size: 0.8rem; /* Tighter checkbox font */
+  color: #475569;
+  cursor: pointer;
+}
+.checkbox-label input {
+  width: 14px;
+  height: 14px;
+  margin-right: 0.4rem;
+  accent-color: #333;
+}
+.checkbox-label a {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ── Submit Button ── */
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem; /* Tighter button padding */
+  background: #5c5cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Tighter corner radius */
+  font-size: 0.95rem; /* Slightly smaller font */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-submit:hover:not(:disabled) {
+  background: #4a4ae6;
+}
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.btn-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Footer ── */
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+.auth-footer a {
+  color: #5c5cff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── Password Strength ── */
+.strength-wrap {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.strength-bars {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  max-width: 100px;
+}
+.strength-bar {
+  height: 4px;
+  flex: 1;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.strength-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ── Alerts ── */
+.alert {
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.alert-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+}
+.alert-error svg { width: 18px; height: 18px; flex-shrink: 0; }
+.alert-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+}
+
+/* ── Various Helpers ── */
+.check-email-card { text-align: center; background: transparent; padding: 1rem; border-radius: 16px; }
+.check-email-icon { font-size: 3rem; margin-bottom: 1rem; }
+.check-email-card h1 { font-size: 1.5rem; font-weight: 800; color: #0f172a; margin: 0 0 0.5rem; }
+.check-email-card p { font-size: 0.95rem; color: #64748b; margin: 0 0 1.5rem; }
+.check-email-sub { margin-top: -1rem !important; }
+
+.otp-input {
+  letter-spacing: 0.5em;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 1rem !important; /* Overwrite icon padding since otp usually has no icon */
+}
+
+.text-btn {
+  background: none;
+  border: none;
+  color: #5c5cff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+.text-btn:hover { text-decoration: underline; }
+.text-btn:disabled { opacity: 0.6; cursor: not-allowed; text-decoration: none; }
