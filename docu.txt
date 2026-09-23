@@ -1,8 +1,1 @@
-   Our app ──────────────────────── Real world
-   ✅ Correct concepts               ✅ Same concepts
-   ✅ Secure password storage        ✅ Same
-   ✅ Google OAuth                   ✅ Same
-   ❌ No email verification          ✅ Always present
-   ❌ No refresh tokens              ✅ Almost always
-   ❌ No rate limiting               ✅ Always present
-   ❌ No password reset              ✅ Always present
+
